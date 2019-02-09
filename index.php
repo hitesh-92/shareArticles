@@ -1,3 +1,7 @@
-<?php //include('init.php'); ?>
+<?php
+    require 'config.php';
+    require 'classes/bootstrap.php';
 
-<?php //include('method.php'); ?>
+    $bootstrap = new Bootstrap($_GET);
+    $controller = $bootstrap->createController();
+?>
