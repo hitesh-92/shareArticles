@@ -15,7 +15,7 @@ class Bootstrap{
         if ($this->request['action'] == "") $this->action = 'index';
         else $this->action = $this->request['action'];
         
-        echo $this->action;
+        // echo $this->action;
     }
 
     public function createController(){
