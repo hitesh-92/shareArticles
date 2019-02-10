@@ -14,7 +14,11 @@
         <p>Posts Board</p>
         <a href="<?php echo ROOT_URL; ?>">Home</a>
         <a href="<?php echo ROOT_URL; ?>/posts">Posts</a>
+        <a href="<?php echo ROOT_URL; ?>/users/login">Log In</a>
+        <a href="<?php echo ROOT_URL; ?>/users/register">Register</a>
     </nav>
+
+    <br>
     
     <div class="container">
         <div class="row"><?php require $view; ?></div>

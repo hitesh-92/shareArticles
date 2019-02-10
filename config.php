@@ -4,10 +4,10 @@
     define("DB_HOST", "localhost");
     define("DB_USER", "root");
     define("DB_PASSWORD", "password");
-    define("DB_NAME", "myblog");
+    define("DB_NAME", "board");
 
     //PATHS
-    define("ROOT PATH", "/oo-php/");
+    define("ROOT_PATH", "/oo-php/");
     define("ROOT_URL", "http://localhost/oo-php");
 
 ?>
