@@ -1,6 +1,6 @@
 <?php
     require 'config.php';
-    require 'classes/bootstrap.php';
+    require 'classes/Bootstrap.php';
     require 'classes/Controller.php';
     require 'classes/Model.php';
 

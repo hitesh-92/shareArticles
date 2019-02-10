@@ -21,7 +21,9 @@ class Bootstrap{
     public function createController(){
 
         // Check class
-        if ( class_exists($this->controller) ){
+        $isClass = class_exists($this->controller);
+        
+        if ($isClass){
 
             $parents = class_parents($this->controller);
 
@@ -32,7 +34,10 @@ class Bootstrap{
                 $hasAction = method_exists($this->controller, $this->action);
 
                 if($hasAction) return new $this->controller($this->action, $this->request);
-                else echo "<p><i>Method Does Not Exist!</i></p>"; //Inform user method does not exists
+                else {
+                    echo "<p><i>Method Does Not Exist!</i></p>"; //Inform user method does not exists
+                    return;
+                }
             }
             else {
                 echo "<p>Base Controller Not Found.</p>";
