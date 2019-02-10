@@ -9,7 +9,6 @@ abstract class Model{
     }
 
     public function query($query){
-        echo "querySet<br>" . $query . "<br>";
         $this->stmt = $this->dbh->prepare($query);
     }
 
@@ -34,24 +33,17 @@ abstract class Model{
                 $type = PDO::PARAM_STR;
             }
         }
-        echo "<br>" . $param . "|" . $value . "|" . $type . "<br>";
         $this->stmt->bindValue($param, $value, $type);
 
     }
 
     public function execute(){
-        echo "queryExe<br>";
         $this->stmt->execute();
     }
 
 
     public function resultSet(){
         $this->execute();
-        echo "resultSet<br>";
-        print_r($this); echo "<br>";
-        $RES = $this->stmt->fetchAll(PDO::FETCH_ASSOC);
-        var_dump($RES);
-
         return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
