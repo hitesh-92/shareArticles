@@ -8,7 +8,7 @@ class PostModel extends Model{
     }
 
     public function add(){
-        // echo "add function INIT";
+        echo "MODEL POSTS.php";
         //Sanitise input data
         $post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
