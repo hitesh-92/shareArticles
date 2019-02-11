@@ -6,15 +6,10 @@
                 <h4><?php echo $item['title']; ?></h4>
                 <small><i><?php echo $item['create_date']; ?></i></small>
                 <p><?php echo $item['body']; ?></p>
-                <a href="<?php echo $item['link']; ?>">
-                    <?php echo $item['link']; ?>
+                <a href="<?php echo $item['link']; ?>" class="btn btn-outline-secondary">
+                    Visit Link
                 </a>
             </li>
         <?php endforeach; ?>
     </ul>
-
-    <!-- <hr> -->
-    <!-- <?php var_dump($viewmodel); ?> -->
-
-
 </div>

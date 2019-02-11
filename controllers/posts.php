@@ -4,5 +4,10 @@ class Posts extends Controller{
         $viewmodel = new PostModel();
         $this->ReturnView($viewmodel->Index(), true);
     }
+
+    protected function add(){
+        $viewmodel = new PostModel();
+        $this->ReturnView($viewmodel->add(), true);
+    }
 }
 ?>
