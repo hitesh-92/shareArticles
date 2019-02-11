@@ -9,6 +9,7 @@
                 <a href="<?php echo $item['link']; ?>" class="btn btn-outline-secondary">
                     Visit Link
                 </a>
+                <p><strong><?php echo $item['link']; ?></strong></p>
             </li>
         <?php endforeach; ?>
     </ul>

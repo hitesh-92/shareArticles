@@ -2,7 +2,7 @@
 
 class PostModel extends Model{
     public function Index(){
-        $this->query('SELECT * FROM posts');
+        $this->query('SELECT * FROM posts ORDER BY create_date DESC');
         $rows = $this->resultSet();
         return $rows;
     }
