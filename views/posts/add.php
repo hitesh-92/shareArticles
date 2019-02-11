@@ -21,11 +21,11 @@
 
         <br><br>
 
-        <input type="button" value="Submit" name="submit">
+        <input type="submit" value="Submit" name="submit">
 
         <br><br>
 
-        <a href="<?php echo ROOT_PATH; ?>posts">Cancel Post</a>
+        <a href="<?php echo ROOT_PATH; ?>posts">Return to Posts</a>
 
     </form>
 

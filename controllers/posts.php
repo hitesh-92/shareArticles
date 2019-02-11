@@ -7,7 +7,7 @@ class Posts extends Controller{
 
     protected function add(){
         $viewmodel = new PostModel();
-        $this->ReturnView($viewmodel->Add(), true);
+        $this->ReturnView($viewmodel->add(), true);
     }
 }
 ?>
