@@ -46,18 +46,29 @@ class UserModel extends Model{
             $this->bind(':email', $post['email']);
             $this->bind(':password', $password);
 
-            // $this->execute();
-
             $row = $this->singleUser();
 
-            if($row) echo "Loggd In";
+            if($row){
+                $_SESSION['is_logged_in'] = true;
+                $_SESSION['user_data'] = array(
+                    "id"    =>$row['id'],
+                    "email" =>$row['email']
+                );
+                header('Location: '.ROOT_URL.'/posts');
+            }
             else echo "NO LOGIN";
-            
-            //verifiy submission and redirect
-            // if($this->lastInsertId()) header('Location:'.ROOT_URL . '/users/login');
 
             return;
         }
+    }
+
+    public function logout(){
+        //Remove session
+        unset($_SESSION['is_logged_in']);
+        unset($_SESSION['user_data']);
+        session_destroy();
+
+        header('Location: '. ROOT_URL);
     }
 
 }

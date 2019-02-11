@@ -10,12 +10,18 @@
 </head>
 <body>
 
-    <nav>
+    <nav style="display: flex; padding: 1em;">
         <p>Posts Board</p>
         <a href="<?php echo ROOT_URL; ?>">Home</a>
         <a href="<?php echo ROOT_URL; ?>/posts">Posts</a>
-        <a href="<?php echo ROOT_URL; ?>/users/login">Log In</a>
-        <a href="<?php echo ROOT_URL; ?>/users/register">Register</a>
+        <?php if ( isset($_SESSION['is_logged_in']) ) : ?>
+            <p>Post an something to remember</p>
+            <p><?php echo $_SESSION['user_data']['email']; ?></p>
+            <a href="<?php echo ROOT_URL.'/users/logout'; ?>">Log Out</a>
+        <?php else : ?>
+            <a href="<?php echo ROOT_URL; ?>/users/login">Log In</a>
+            <a href="<?php echo ROOT_URL; ?>/users/register">Register</a>
+        <?php endif; ?>
     </nav>
 
     <br>
