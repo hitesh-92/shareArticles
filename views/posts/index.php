@@ -1,5 +1,7 @@
 <div>
-    <a href="<?php echo ROOT_PATH; ?>posts/add">Add Post</a>
+    <?php if(isset($_SESSION['is_logged_in'])) : ?>
+        <a href="<?php echo ROOT_PATH; ?>posts/add">Add Post</a>
+    <?php endif; ?>
     <ul class="list-group">
         <?php foreach($viewmodel as $item) : ?>
             <li class="list-group-item">
